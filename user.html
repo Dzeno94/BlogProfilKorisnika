@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+
+    <div class="wrapper">
+        <div class="nav">
+            <img style="padding: 10px 20px;" height="50"
+                src="https://www.inspire-writer.com/blog/wp-content/uploads/2019/03/noframe_256.png" alt="">
+            <div class="user-info" >
+                <div class="logout-block">
+                    <span id="user-name"></span>
+                    <a href="index.html"><img style="border-radius: 50%;" height="50"
+                        src="https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-hipster-vector-stock-91462914.jpg"
+                        alt=""></a>
+                    <i onclick="logout()" class="fa fa-power-off" style="font-size:32px;color:red;cursor: pointer;"></i>
+                </div>
+                <button onclick="logout()" class="sign-in">SignIn</button>
+            </div>
+        </div>
+        <div class="flex-container">
+        <div class="sidebar">
+       <div class="user-name-img">
+        <img style="border-radius: 50%;" height="50"
+            src="https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-hipster-vector-stock-91462914.jpg"
+            alt="">
+            <span id="user-name-sidebar"></span>
+        </div>
+       <div id="user-adress"></div>
+       <div id="user-email"></div>
+       <div id="user-nickname"></div>
+        </div>
+        <div class="blog-area">
+            <input onkeyup="searchBlogs(event)" class="blog-input" type="text" placeholder="Search for blog....">
+          
+            
+            <div id="published-blogs"></div>
+        </div>
+    </div>
+
+    <div id="login-form" class="login-form">
+        <h1>Login</h1>
+        <input id="email" type="text" placeholder="Email or Username">
+        <input onkeyup="loginOnEnter(event)" id="password" type="password" placeholder="Password">
+        <p class="error-msg">Invalid Credentials!</p>
+        <button onclick="login()" class="login-btn">Login</button>
+        <p>Don't have an account?<a onclick="goToSignupForm()" href="#">Sign up</a></p>
+    </div>
+
+    <div id="signup-form" class="login-form">
+        <h1>SignUp</h1>
+        <input id="name" type="text" placeholder="Name">
+        <input id="su-email" type="text" placeholder="Email">
+        <input id="address" type="text" placeholder="Address">
+        <input id="username" type="text" placeholder="Username">
+        <input id="su-password" type="password" placeholder="Password">
+        <button onclick="registerNow()" class="login-btn">Register Now</button>
+        <p><a onclick="goToLoginForm()" href="#">Login</a></p>
+    </div>
+
+
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
